@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff5e1; /* Light cream background */
+  color: #5a3e36; /* Warm brown text */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d35400; /* Warm orange for the heading */
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.js-name-input, .js-date-input {
+  padding: 10px;
+  border: 2px solid #d35400; /* Warm orange border */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5a3e36;
+}
+
+.js-name-input::placeholder {
+  color: #a5a5a5; /* Light gray placeholder */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #d35400; /* Warm orange button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e67e22; /* Lighter orange on hover */
+}
+
+/* To-Do List Styles */
+.js-show-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #d35400; /* Warm orange border */
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a3e36; /* Warm brown text */
+}
+
+.due-date {
+  font-size: 0.9rem;
+  color: #d35400; /* Warm orange for the due date */
+}
+
+.todo-item button {
+  background-color: #e74c3c; /* Red for the delete button */
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}

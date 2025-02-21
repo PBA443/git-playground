@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Advance Function
+    </title>
+  </head>
+  <body>
+    <button onclick="" onkeydown="" class="js-button">Click</button>
+    <script>
+      const buttonElement = document.querySelector('.js-button');
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click again man');
+      });
+
+      buttonElement.addEventListener('keydown',(event) => {
+        if (event.key === 'Enter') console.log('you enter man');
+      });
+      /*
+      function outer(x) {
+          return function inner(y) {
+              return x + y;
+          };
+      }
+
+      console.log(outer(3)(1)); 
+    setTimeout(function(){
+      console.log('timeout')
+    },5000);
+    console.log('next time');
+
+    setInterval(function(){
+      console.log('interval');
+    },3000);
+    console.log('another-line');
+    
+      const name = (parameters) => {
+        console.log(parameters);
+      }
+      name('hello');
+      */
+     const numArray = [1,2,-8,5,-9,6];
+
+     const newArray = (numArray.filter((value,index)=>{
+      return value >=0 ;
+     }));
+     console.log(newArray);
+
+     const doubleNewArray = newArray.map((value,index)=>{
+      return value*2;
+     });
+
+     console.log(doubleNewArray);
+
+     console.log(doubleNewArray.map(value =>  value*2 ));
+    </script>
+  </body>
+</html>

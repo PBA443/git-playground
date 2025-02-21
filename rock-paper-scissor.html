@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="styles/rock-paper-scissor.css">
+  </head>
+  <body>
+    <h1>Rock Paper Scissor Game</h1>
+    <button onclick="playGame(0)" class="move-button"><img src="images/js-rock.png" class="move-icon"></button>
+    <button onclick="playGame(1)" class="move-button"><img src="images/js-paper.png" class="move-icon"></button>
+    <button onclick="playGame(2)" class="move-button"><img src="images/js-scrissor.png" class="move-icon"></button>
+    
+    <p id="score" class="js-score"></p>
+    <div id="result">
+      <div class="result-images">
+        <span>Your move: </span>
+        <img id="player-move-img" src="images/js-scrissor.png">
+        <span>Computer's move: </span>
+        <img id="computer-move-img" src="images/js-scrissor.png">
+      </div>
+      <p id="result-message"></p>
+    </div>
+    <button onclick="resetScore()" class="reset-button">Reset</button>
+    <button onclick="autoPlay()" class="autoplay-button">Auto play</button>
+    <footer>
+      <p>Press <strong>R</strong> for Rock, <strong>P</strong> for Paper, <strong>S</strong> for Scissors.</p>
+      <p>Click the buttons or use the keyboard to play!</p>
+    </footer>
+    
+    <script src="scripts/rock-paper-scissor.js"></script>
+  </body>
+</html>

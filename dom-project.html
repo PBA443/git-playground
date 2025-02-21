@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .subscribe-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      .is-subscribed {
+        background-color: rgb(205, 205, 205);
+        color: black;
+      }
+      .style-input {
+        font-size: small;
+        padding: 5px;
+      }
+      .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 6px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button type="button" class="js-subscribe-button subscribe-button">hola Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Shipping Options:</p>
+    <label>
+      <input type="radio" name="shipping" value="standard" checked> Standard Shipping ($10)
+    </label>
+    <label>
+      <input type="radio" name="shipping" value="express"> Express Shipping ($20)
+    </label>
+    <label>
+      <input type="radio" name="shipping" value="free"> Free Shipping (Orders over $100)
+    </label>
+    <label for="cost-input">Cost of Order:</label>
+    <input id="cost-input" placeholder="Cost of Order" class="js-input style-input">
+    <button type="button" class="js-calculate-button calculate-button">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <script>
+      // Subscribe Button Logic
+      const subscribeButton = document.querySelector('.js-subscribe-button');
+      subscribeButton.addEventListener('click', () => {
+        if (subscribeButton.innerHTML === 'hola Subscribe') {
+          subscribeButton.innerHTML = 'Subscribed';
+          subscribeButton.classList.add('is-subscribed');
+        } else {
+          subscribeButton.innerHTML = 'hola Subscribe';
+          subscribeButton.classList.remove('is-subscribed');
+        }
+      });
+
+      // Shipping Calculator Logic
+      const inputElement = document.querySelector('.js-input');
+      const calculateButton = document.querySelector('.js-calculate-button');
+      const totalCostElement = document.querySelector('.js-total-cost');
+
+      calculateButton.addEventListener('click', calculateTotal);
+      inputElement.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      });
+
+      function calculateTotal() {
+        const cost = Number(inputElement.value);
+        if (isNaN(cost) || cost < 0) {
+          totalCostElement.innerText = 'Please enter a valid number.';
+          return;
+        }
+
+        const shippingOption = document.querySelector('input[name="shipping"]:checked').value;
+        let shippingCost = 0;
+
+        if (shippingOption === 'standard') {
+          shippingCost = 10;
+        } else if (shippingOption === 'express') {
+          shippingCost = 20;
+        } else if (shippingOption === 'free' && cost >= 100) {
+          shippingCost = 0;
+        } else {
+          shippingCost = 10; // Default to standard shipping if free shipping is not applicable
+        }
+
+        const totalCost = cost + shippingCost;
+        totalCostElement.innerText = `Subtotal: $${cost.toFixed(2)}, Shipping: $${shippingCost.toFixed(2)}, Total: $${totalCost.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>

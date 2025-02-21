@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      function
+    </title>
+  </head>
+  <body>
+    <script>
+      function generateCombinations(str) {
+       const combinations = [];
+
+        // Outer loop: starting point of the substring
+        for (let i = 0; i < str.length; i++) {
+          let currentCombination = '';
+
+          // Inner loop: builds the substring from the starting point
+          for (let j = i; j < str.length; j++) {
+            currentCombination += str[j]; // Add the current character to the combination
+            combinations.push(currentCombination); // Add the combination to the result array
+          }
+        }
+
+        return combinations;
+}
+
+// Example usage:
+const inputString = 'dog';
+const result = generateCombinations(inputString);
+console.log(result.join(',')); // Output: d,do,dog,o,og,g
+    </script>
+  </body>
+</html>

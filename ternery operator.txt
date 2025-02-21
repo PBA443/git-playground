@@ -1,0 +1,37 @@
+ternery operator ?
+
+true ? 'truthy' : 'falsy';
+it is similar for 
+if (true){
+'truthy'
+}else{
+'falsy'
+}
+no complex
+
+and we can save this like 
+
+const value = true ? 'truthy' : 'falsy';
+
+guard operator &&
+
+operate right side only true 
+
+const value = false && 'sure';
+
+its like 
+
+let value;
+
+if (condition){
+value = 'sure'
+}
+
+default operator ||
+
+const currency = 'EUR' || 'USD';
+
+let is like default value 
+const currency = undefined || 'USD';
+
+
