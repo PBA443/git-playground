@@ -1,0 +1,37 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.toggleHeader {
+  height: 80px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tile {
+  background-color: black;
+  width: calc(34% - 20px); /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  margin: 0;
+}

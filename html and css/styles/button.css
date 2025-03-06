@@ -1,0 +1,29 @@
+/* Base button style */
+.youtube-subscribe-button {
+  background-color: #cc0000; /* YouTube's red color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for better spacing */
+  font-size: 14px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border-radius: 50px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-transform: uppercase; /* Uppercase text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.youtube-subscribe-button:hover {
+  background-color: #b30000; /* Darker red on hover */
+}
+
+/* Active (click) effect */
+.youtube-subscribe-button:active {
+  background-color: #990000; /* Even darker red when clicked */
+}
+
+/* Focus effect */
+.youtube-subscribe-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.3); /* Add a subtle shadow for focus */
+}

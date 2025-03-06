@@ -1,0 +1,41 @@
+.thumbnail {
+  width: 300px;
+}
+
+.video-preview {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.video-search {
+
+}
+
+.video-title,
+.video-author {
+
+}
+
+.video-profile {
+  width: 50px;
+  display: inline-block;
+}
+
+.horizontal-inline {
+  display: inline-block;
+}
+
+.header {
+  margin-top: 60px;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,93 @@
+.pos-div-1 {
+  background-color: lightblue;
+  height: 200px;
+  width: 200px;
+  position: static;
+}
+
+.pos-div-2 {
+  background-color: lightcoral;
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+
+.hearder {
+  background-color: gray;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 70px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.items {
+  height: 50px;
+  
+}
+
+.items-label {
+  height: 20px;
+  width: 30px;
+}
+
+.item-button {
+  position: relative;
+}
+
+.item-button .tips {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.item-button:hover .tips {
+  opacity: 1;
+}
+
+.sidebar {
+  background-color: lightgreen;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 70px;
+  width: 70px;
+}
+
+.sidebar-link {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sidebar-link img{
+  background-color: lightcyan;
+  height: 20px;
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.absolute {
+  position: absolute;
+  background-color: red;
+  color: white;
+  right: 10px;
+  top: 80px;
+}
+
+.body {
+  height: 1000px;
+  padding-top: 72px;
+  padding-left: 72px;
+}
