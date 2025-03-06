@@ -35,3 +35,5 @@ export class SpecialPizza extends Pizza {
 
 const myPizza = new Pizza("large");
 console.log(myPizza);
+
+const fdPizza = new Pizza("medium");
