@@ -1,9 +1,9 @@
 let usrname = 'Bega'
 console.log(usrname)
 
-let a = 12
-let b = '45'
-let c = 56
+let a:number = 12
+let b:number = 45
+let c:number = 56
 
 console.log(a/b)
 
