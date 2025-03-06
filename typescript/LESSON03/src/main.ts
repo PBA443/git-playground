@@ -28,8 +28,14 @@ const exampleObj ={
 exampleObj.prop2='Hasan'
 
 type Guitarist = {
+  name?:string,
+  active:boolean,
+  albums:(string | number)[]
+}
+
+interface Guitarista {
   name:string,
-  active?:boolean,
+  active:boolean,
   albums:(string | number)[]
 }
 
@@ -40,9 +46,29 @@ let john: Guitarist = {
 }
 
 let reaper: Guitarist = {
-  name:'Thon Mist',
-  //active:true,
+  //name:'Thon Mist',
+  active:true,
   albums:['I','IV']
 }
 
-reaper=john
+const greetGuitarist = (guitarist:Guitarist)=>{
+  if(guitarist.name)
+  {
+    return `Hello ${guitarist.name.toUpperCase()}!`
+  }
+  return 'Hello!'
+}
+
+console.log(greetGuitarist(john))
+
+//Enums
+
+enum Grade {
+  U=8,
+  D,
+  C,
+  B,
+  A
+}
+
+console.log(Grade.U)

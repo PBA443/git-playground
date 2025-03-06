@@ -23,8 +23,24 @@ let john = {
     albums: [45, 'supra']
 };
 let reaper = {
-    name: 'Thon Mist',
-    //active:true,
+    //name:'Thon Mist',
+    active: true,
     albums: ['I', 'IV']
 };
-reaper = john;
+const greetGuitarist = (guitarist) => {
+    if (guitarist.name) {
+        return `Hello ${guitarist.name.toUpperCase()}!`;
+    }
+    return 'Hello!';
+};
+console.log(greetGuitarist(john));
+//Enums
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 0] = "U";
+    Grade[Grade["D"] = 1] = "D";
+    Grade[Grade["C"] = 2] = "C";
+    Grade[Grade["B"] = 3] = "B";
+    Grade[Grade["A"] = 4] = "A";
+})(Grade || (Grade = {}));
+console.log(Grade.U);
