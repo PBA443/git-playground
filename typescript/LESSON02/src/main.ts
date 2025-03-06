@@ -11,3 +11,5 @@ meaningOfLife = true
 const sum =(a:string,b:number)=>{
   return a+b;
 }
+
+let re = /\w/g
