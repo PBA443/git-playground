@@ -6,3 +6,11 @@ const todayTransactions = {
     Job: 50
 };
 console.log(todayTransactions.Pizza);
+const todaysNet = (transactions) => {
+    let total = 0;
+    for (const transction in transactions) {
+        total += transactions[transction];
+    }
+    return total;
+};
+console.log(todaysNet(todayTransactions));
